@@ -29,7 +29,7 @@ class ProductManagerTest {
     void shouldSearchByPhoneName() {
         ProductRepository repository = new ProductRepository();
         ProductManager manager = new ProductManager(repository);
-        Product[] expected = {new Smartphone(3, 3000, "SmartThree", "BrandThree")};
+        Product[] expected = {new Smartphone(6, 6000, "SmartThree", "BrandThree")};
         Product[] actual = manager.searchBy("SmartThree");
         assertArrayEquals(expected, actual);
     }
@@ -38,7 +38,7 @@ class ProductManagerTest {
     void shouldSearchByBrand() {
         ProductRepository repository = new ProductRepository();
         ProductManager manager = new ProductManager(repository);
-        Product[] expected = {new Smartphone(1, 1000, "SmartOne", "BrandOne")};
+        Product[] expected = {new Smartphone(4, 4000, "SmartOne", "BrandOne")};
         Product[] actual = manager.searchBy("BrandOne");
         assertArrayEquals(expected, actual);
     }

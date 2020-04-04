@@ -14,5 +14,16 @@ public class Smartphone extends Product {
         super(id, price, name);
         this.brand = brand;
     }
+    @Override
+    public boolean matches(String search) {
+        return super.matches(search) || this.getBrand().matches(search);
+    }
 
+//    @Override
+//    public boolean matches(String search) {
+//        if (super.matches(search)) {
+//            return true;
+//        }
+//        return super.matches(search) || this.getBrand().matches(search);
+//    }
 }
