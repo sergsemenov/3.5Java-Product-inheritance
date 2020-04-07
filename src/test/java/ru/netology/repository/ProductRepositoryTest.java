@@ -1,9 +1,9 @@
 package ru.netology.repository;
 
 import org.junit.jupiter.api.Test;
-import ru.netology.product.Book;
-import ru.netology.product.Product;
-import ru.netology.product.Smartphone;
+import ru.netology.domain.Book;
+import ru.netology.domain.Product;
+import ru.netology.domain.Smartphone;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

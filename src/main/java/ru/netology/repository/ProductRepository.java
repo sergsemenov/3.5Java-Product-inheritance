@@ -1,8 +1,8 @@
 package ru.netology.repository;
 
-import ru.netology.product.Book;
-import ru.netology.product.Product;
-import ru.netology.product.Smartphone;
+import ru.netology.domain.Book;
+import ru.netology.domain.Product;
+import ru.netology.domain.Smartphone;
 
 public class ProductRepository {
     Product[] items = {new Book(1, 100, "BookOne", "AuthorOne"),

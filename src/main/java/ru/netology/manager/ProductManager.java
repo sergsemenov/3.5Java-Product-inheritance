@@ -2,9 +2,9 @@ package ru.netology.manager;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import ru.netology.product.Book;
-import ru.netology.product.Product;
-import ru.netology.product.Smartphone;
+import ru.netology.domain.Book;
+import ru.netology.domain.Product;
+import ru.netology.domain.Smartphone;
 import ru.netology.repository.ProductRepository;
 
 @AllArgsConstructor
