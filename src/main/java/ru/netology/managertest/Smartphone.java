@@ -1,12 +1,14 @@
-package ru.netology.domain;
+package ru.netology.managertest;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.EqualsAndHashCode;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
+@EqualsAndHashCode(callSuper = true)
 public class Smartphone extends Product {
     private String brand;
 
@@ -14,5 +16,4 @@ public class Smartphone extends Product {
         super(id, price, name);
         this.brand = brand;
     }
-
 }

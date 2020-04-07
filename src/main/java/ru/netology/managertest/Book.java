@@ -1,12 +1,14 @@
-package ru.netology.domain;
+package ru.netology.managertest;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.EqualsAndHashCode;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
+@EqualsAndHashCode(callSuper = true)
 public class Book extends Product {
     private String author;
 

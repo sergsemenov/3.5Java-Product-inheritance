@@ -1,16 +1,16 @@
 package ru.netology.repository;
 
-import ru.netology.domain.Book;
-import ru.netology.domain.Product;
-import ru.netology.domain.Smartphone;
+import ru.netology.managertest.Book;
+import ru.netology.managertest.Product;
+import ru.netology.managertest.Smartphone;
 
 public class ProductRepository {
     Product[] items = {new Book(1, 100, "BookOne", "AuthorOne"),
             new Book(2, 200, "BookTwo", "AuthorTwo"),
             new Book(3, 300, "BookThree", "AuthorThree"),
-            new Smartphone(1, 1000, "SmartOne", "BrandOne"),
-            new Smartphone(2, 2000, "SmartTwo", "BrandTwo"),
-            new Smartphone(3, 3000, "SmartThree", "BrandThree")
+            new Smartphone(4, 1000, "SmartOne", "BrandOne"),
+            new Smartphone(5, 2000, "SmartTwo", "BrandTwo"),
+            new Smartphone(6, 3000, "SmartThree", "BrandThree")
     };
 
     public void save(Product item) {
