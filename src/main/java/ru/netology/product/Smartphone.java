@@ -1,4 +1,4 @@
-package ru.netology.managertest;
+package ru.netology.product;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

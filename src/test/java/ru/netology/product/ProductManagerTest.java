@@ -1,4 +1,4 @@
-package ru.netology.managertest;
+package ru.netology.product;
 
 import org.junit.jupiter.api.Test;
 import ru.netology.manager.ProductManager;
