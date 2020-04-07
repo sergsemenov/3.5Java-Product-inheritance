@@ -1,14 +1,12 @@
-package ru.netology.domain;
+package ru.netology.manager;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import ru.netology.domain.Product;
 import ru.netology.repository.ProductRepository;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
-
 public class ProductManager {
     private ProductRepository repository;
 
@@ -28,6 +26,4 @@ public class ProductManager {
         }
         return result;
     }
-
-
 }

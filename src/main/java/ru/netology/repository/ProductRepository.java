@@ -8,9 +8,9 @@ public class ProductRepository {
     Product[] items = {new Book(1, 100, "BookOne", "AuthorOne"),
             new Book(2, 200, "BookTwo", "AuthorTwo"),
             new Book(3, 300, "BookThree", "AuthorThree"),
-            new Smartphone(4, 4000, "SmartOne", "BrandOne"),
-            new Smartphone(5, 5000, "SmartTwo", "BrandTwo"),
-            new Smartphone(6, 6000, "SmartThree", "BrandThree")
+            new Smartphone(4, 1000, "SmartOne", "BrandOne"),
+            new Smartphone(5, 2000, "SmartTwo", "BrandTwo"),
+            new Smartphone(6, 3000, "SmartThree", "BrandThree")
     };
 
     public void save(Product item) {

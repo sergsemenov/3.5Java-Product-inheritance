@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class BookTest {
 
     @Test
-    void shouldMatchesByAuthor() {
+    void shouldMatchByAuthor() {
         Book book = new Book(100, 100,"100", "MySelf");
         boolean actual = book.matches("MySelf");
         assertEquals(true, actual);
@@ -15,14 +15,14 @@ class BookTest {
     }
 
     @Test
-    void shouldMatchesByName() {
+    void shouldMatchByName() {
         Book book = new Book(300, 300,"300", "MySelf");
         boolean actual = book.matches("300");
         assertEquals(true, actual);
     }
 
     @Test
-    void shouldNotMatchesByAuthor() {
+    void shouldNotMatchByAuthor() {
         Book book = new Book(100, 100,"100", "MySelf");
         boolean actual = book.matches("YourSelf");
         assertEquals(false, actual);
@@ -30,7 +30,7 @@ class BookTest {
     }
 
     @Test
-    void shouldNotMatchesByName() {
+    void shouldNotMatchByName() {
         Book book = new Book(300, 300,"300", "MySelf");
         boolean actual = book.matches("400");
         assertEquals(false, actual);

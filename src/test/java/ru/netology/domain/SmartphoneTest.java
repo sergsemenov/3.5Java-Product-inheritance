@@ -2,37 +2,36 @@ package ru.netology.domain;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 class SmartphoneTest {
 
     @Test
-    void shouldMatchesByBrand() {
+    void shouldMatchByBrand() {
         Smartphone smart = new Smartphone(4, 444, "Smart444", "Brand444");
         boolean actual = smart.matches("Brand444");
-        assertEquals(true, actual);
-
+        assertTrue(actual);
     }
 
     @Test
-    void shouldMatchesByName() {
+    void shouldMatchByName() {
         Smartphone smart = new Smartphone(5, 555, "Smart555", "Brand555");
         boolean actual = smart.matches("Smart555");
-        assertEquals(true, actual);
+        assertTrue(actual);
     }
 
     @Test
-    void shouldNotMatchesByBrand() {
+    void shouldNotMatchByBrand() {
         Smartphone smart = new Smartphone(4, 444, "Smart444", "Brand444");
         boolean actual = smart.matches("Brand666");
-        assertEquals(false, actual);
-
+        assertFalse(actual);
     }
 
     @Test
-    void shouldNotMatchesByName() {
+    void shouldNotMatchByName() {
         Smartphone smart = new Smartphone(5, 555, "Smart555", "Brand555");
         boolean actual = smart.matches("Smart666");
-        assertEquals(false, actual);
+        assertFalse(actual);
     }
 }
