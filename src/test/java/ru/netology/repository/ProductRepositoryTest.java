@@ -34,35 +34,6 @@ class ProductRepositoryTest {
     }
 
     @Test
-    void shouldSave() {
-        repository.save(itemToAdd);
-        Product[] actual = repository.findAll();
-        Product[] expected = {
-                testitem1,
-                testitem2,
-                testitem3,
-                testitem4,
-                testitem5,
-                testitem6,
-                itemToAdd
-        };
-        assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    void shouldFindByIdPositive() {
-        Product actual = repository.findById(1);
-        Product expected = testitem1;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void shouldFindByIdNegative() {
-        Product actual = repository.findById(11111);
-        assertEquals(null, actual);
-    }
-
-    @Test
     void shouldRemoveByIdPositive() {
         repository.removeById(1);
         Product[] actual = repository.findAll();
