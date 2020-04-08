@@ -3,6 +3,7 @@ package ru.netology.repository;
 import ru.netology.domain.Book;
 import ru.netology.domain.Product;
 import ru.netology.domain.Smartphone;
+import ru.netology.exception.NotFoundException;
 
 public class ProductRepository {
     Product[] items = new Product[0];
@@ -30,15 +31,19 @@ public class ProductRepository {
     }
 
     public void removeById(int id) {
-        int length = items.length - 1;
-        Product[] tmp = new Product[length];
-        int index = 0;
-        for (Product item : items) {
-            if (item.getId() != id) {
-                tmp[index] = item;
-                index++;
+        if (findById(id) == null) {
+            throw new NotFoundException("Element with id: " + id + " not found!");
+        } else {
+            int length = items.length - 1;
+            Product[] tmp = new Product[length];
+            int index = 0;
+            for (Product item : items) {
+                if (item.getId() != id) {
+                    tmp[index] = item;
+                    index++;
+                }
             }
+            items = tmp;
         }
-        items = tmp;
     }
 }

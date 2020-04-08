@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import ru.netology.domain.Book;
 import ru.netology.domain.Product;
 import ru.netology.domain.Smartphone;
+import ru.netology.exception.NotFoundException;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -70,13 +71,13 @@ class ProductRepositoryTest {
                 testitem3,
                 testitem4,
                 testitem5,
-                testitem6,
+                testitem6
         };
         assertArrayEquals(expected, actual);
     }
 
     @Test
     void shouldRemoveByIdNegative() {
-        assertThrows(ArrayIndexOutOfBoundsException.class, () -> repository.removeById(11111));
+        assertThrows(NotFoundException.class, () -> repository.removeById(11111));
     }
 }
